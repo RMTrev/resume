@@ -18,29 +18,15 @@
 \usepackage{fontspec}
 \pagestyle{empty}
 
+% define some colors
 \definecolor{MidnightBlue}{RGB}{25,25,112}
 \definecolor{White}{RGB}{255,255,255}
 
 \setsansfont{Nimbus Sans L}
 
-\newcommand{\authorName}{Trevor Daniels}
-\newcommand{\dateWritten}{2011-09-15}
-\newcommand{\docTitle}{Assignment 2}
-\newcommand{\groupName}{CSCE 435}
-
-\newenvironment{blockquote}[0]
-{ \begin{leftbar} }
-{\end{leftbar} }
-
-%\title{\docTitle}
-%\author{\authorName}
-%\date{\dateWritten}
-
 \begin{document}
-%\maketitle
-%\lhead{\docTitle \\ \groupName}
-%\rhead{\dateWritten \\ \authorName}
 
+% top blue box
 \noindent\colorbox{MidnightBlue}{%
 \noindent\parbox{8.0in}{\textcolor{White}{%
 \begin{center}
@@ -50,11 +36,13 @@
 \end{center}
 }}}
 
+% my name and contact info
 \begin{center}
 \noindent {\Huge \textsf{Trevor Daniels}} \\
 \noindent\textsf{rm.trev@gmail.com | 402.770.0975}
 \end{center}
 
+% create a parbox to have 1 inch margins
 \begin{center}
 \noindent\parbox{6.5in}{{\small
 
@@ -105,6 +93,7 @@
 \noindent\textbf{\textit{References available upon request}}
 \end{center}
 
+% bottom blue box
 \noindent\colorbox{MidnightBlue}{%
 \noindent\parbox{8.0in}{\textcolor{White}{%
 \begin{center}

@@ -4,6 +4,7 @@
 \geometry{letterpaper}          % ... or a4paper or a5paper or ... 
 %\usepackage{textcomp}
 %\usepackage{graphicx}
+\usepackage{hyperref}
 %\usepackage{amssymb}
 %\usepackage{epstopdf}
 %\usepackage{verbatim}
@@ -15,38 +16,80 @@
 \usepackage{framed}
 \usepackage{color}
 \usepackage{calc}
-\usepackage{fontspec}
+%\usepackage{fontspec}
 \pagestyle{empty}
 
 % define some colors
 \definecolor{MidnightBlue}{RGB}{25,25,112}
 \definecolor{White}{RGB}{255,255,255}
 
-\setsansfont{Nimbus Sans L}
+\hypersetup{
+colorlinks=true,
+urlcolor=blue
+}
 
-\begin{document}
-
-% top blue box
+\newcommand{\TopBox}{
 \noindent\colorbox{MidnightBlue}{%
 \noindent\parbox{8.0in}{\textcolor{White}{%
 \begin{center}
 \vspace{0.0625in}
-\noindent {Computer Programming | Web Technologies | Database Management | Software Engineering}
+\noindent {Computer Programming $|$ Web Technologies $|$ Database Management $|$ Software Engineering}
 \vspace{0.0625in}
 \end{center}
 }}}
+}
+
+\newcommand{\BottomBox}{
+\noindent\colorbox{MidnightBlue}{%
+\noindent\parbox{8.0in}{\textcolor{White}{%
+\begin{center}
+\vspace{0.0625in}
+\noindent {Trevor Daniels, 4243 N 1st Street Apt 380 -- Lincoln, NE 68521}
+\vspace{0.0625in}
+\end{center}
+}}}
+}
+
+%\setsansfont{Nimbus Sans L}
+
+\begin{document}
+
+% top blue box
+\TopBox
 
 % my name and contact info
 \begin{center}
 \noindent {\Huge \textsf{Trevor Daniels}} \\
-\noindent\textsf{rm.trev@gmail.com | 402.770.0975}
+\noindent\textsf{rm.trev@gmail.com $|$ 402.770.0975}
 \end{center}
 
 % create a parbox to have 1 inch margins
 \begin{center}
 \noindent\parbox{6.5in}{{\small
+\noindent \framebox[6.5in][l]{\large\textbf{\textit{Skills}}}
+\begin{itemize}
+\item Five years experience with the Linux operating system. Able to use the command line and the GNU/Linux toolchain to manage a server.
+\item Three years experience with IIS and the ASP.NET web platform.
+\item Proficient with Android development. Built a client-server data synchronization system for a data collection app, meant to address the issue of limited network connectivity in rural Nebraska.
+\item Extensive experience with web technologies.  Implemented a REST web service for mobile clients to check status of the StarTran Bus Service in Lincoln, NE.
+\item Experience with heuristic-driven search algorithms, such as A$\ast$, used in artificial intelligence.
+\item Ability to work in a team setting to complete software projects.
+\end{itemize}
+}}
 
-\noindent {\Large\textbf{\textit{Education}}}
+\noindent\parbox{6.5in}{{\small
+\noindent\framebox[6.5in][l]{\large\textbf{\textit{Technical Tools}}}
+\begin{itemize}
+\item\textbf{Languages:} C/C++, C\#, Python, PHP, Java, LISP, HTML5, CSS3, Javascript
+\item\textbf{Database Engines:} MySQL, MSSQL, SQLite
+\item\textbf{Development Environments:} Visual Studio, Eclipse, Android SDK, Emacs
+\item\textbf{Frameworks:} .NET, Django, jQuery, Dojo
+\item\textbf{Source Control:} Git, Team Foundation Server
+\end{itemize}
+}}
+
+\noindent\parbox{6.5in}{{\small
+\noindent \framebox[6.5in][l]{\large\textbf{\textit{Education}}}
 \begin{itemize}
 \item\textbf{University of Nebraska--Lincoln (UNL)}, \textit{College of Arts and Sciences}\\
 \underline{Lincoln, Nebraska}, January, 2007 -- December, 2011
@@ -60,16 +103,32 @@
 \item Dean's List all quarters
 \end{itemize}
 \end{itemize}
+}}
 
-\noindent {\Large\textbf{\textit{Work Experience}}}
+\vfill
+\BottomBox
+
+\newpage
+\TopBox
+
+\vspace{0.25in}
+\noindent\parbox{6.5in}{{\small
+\noindent \framebox[6.5in][l]{\large\textbf{\textit{Professional Experience}}}
 \begin{itemize}
+\item\textbf{GIS Workshop, LLC}\\
+\textit{Software Developer}, May, 2012 -- January, 2016
+\begin{itemize}
+\item Developed custom GIS solutions for a variety of platforms, including desktop, web and Android, using ESRI's ArcGIS as the underlying engine.
+\item Managed websites for hundreds of clients, primarily county officials across Nebraska, North Dakota, and South Dakota.
+\item Used modern collaboration tools, such as Git, to complete large projects.
+\end{itemize}
 \item\textbf{UNL Student Involvement--Information Strategies}\\
 \textit{Webmaster/Database Manager}, January, 2007 -- December, 2011
 \begin{itemize}
 \item Managed and updated three websites with seven different program areas.
 \item Designed, produced and uploaded Flash and other multimedia promotions for all Student Involvement events and programs.
 \item Worked within a team setting to create web and multimedia promotional materials and web forms that are effective for college students.
-\item Worked with databases, clients and server-side scripting.
+%\item Worked with databases, clients and server-side scripting.
 \end{itemize}
 \item\textbf{Southeast Community College--Technology}\\
 \textit{Student IT Technician}, Summer 2006
@@ -79,28 +138,23 @@
 \item Charged with setting up all new lab computers.
 \end{itemize}
 \end{itemize}
+}}
 
-\noindent {\Large\textbf{\textit{Skills}}}
+\noindent\parbox{6.5in}{{\small
+\noindent \framebox[6.5in][l]{\large\textbf{\textit{Links}}}
 \begin{itemize}
-\item Proficient with C/C++, Python, PHP, Java, LISP, SQL, HTML5, CSS3 and JavaScript.
-\item Five years experience with the Linux operating system. Able to use the command line to manage a server.
-\item Extensive experience with web technologies.  Implemented a RESTful web service for mobile clients to check status of the StarTran Bus Service in Lincoln, NE.
-\item Experience with cluster and grid computing, artificial intelligence, and compiler construction.
-\item Ability to work in a team setting to complete software projects.
+\item\textbf{Github:} \href{https://github.com/RMTrev}{https://github.com/RMTrev}
+\item\textbf{LinkedIn:} \href{https://www.linkedin.com/in/trevor-daniels-72bb078}{https://www.linkedin.com/in/trevor-daniels-72bb078}
+\item\textbf{Twitter:} \href{https://twitter.com/RM\_Trev}{https://twitter.com/RM\_Trev}
 \end{itemize}
 }}
 
-\noindent\textbf{\textit{References available upon request}}
+%\noindent\textbf{\textit{References available upon request}}
 \end{center}
 
+\vfill
+
 % bottom blue box
-\noindent\colorbox{MidnightBlue}{%
-\noindent\parbox{8.0in}{\textcolor{White}{%
-\begin{center}
-\vspace{0.0625in}
-\noindent {Trevor Daniels, 1225 Argyll Place -- Lincoln, NE 68512}
-\vspace{0.0625in}
-\end{center}
-}}}
+\BottomBox
 
 \end{document}
